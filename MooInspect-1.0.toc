@@ -1,0 +1,15 @@
+## Interface: 80000
+## Version: @project-version@
+
+## Title: MooInspect-1.0
+## Notes: Library for asynchronous inspection of unit specialization, talents, and equipment.
+
+## Author: Johnny C. Lam
+## X-Category: Library
+## X-License: BSD License
+## X-Website: https://github.com/ultijlam/mooinspect-1-0
+
+## OptionalDependencies: LibStub, CallbackHandler-1.0, MooUnit-1.0
+
+embeds.xml
+MooInspect-1.0.xml
