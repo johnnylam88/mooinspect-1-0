@@ -8,6 +8,8 @@
 ## X-Category: Library
 ## X-License: BSD License
 ## X-Website: https://github.com/ultijlam/mooinspect-1-0
+## X-Curse-Project-ID: 306870
+## X-WoWI-ID: 24855
 
 ## OptionalDependencies: LibStub, CallbackHandler-1.0, MooUnit-1.0
 
