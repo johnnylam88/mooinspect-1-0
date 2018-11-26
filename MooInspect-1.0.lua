@@ -164,9 +164,8 @@ end
 lib.sent = lib.sent or {}
 lib.timestamp = lib.timestamp or {} -- timestamp[guid] = time that data was last received
 lib.lastInspectTime = lib.lastInspectTime or 0
-
-local INSPECT_INTERVAL = 2 -- number of seconds between inspections
-local INSPECT_TIMEOUT = 10 -- number of seconds before timing out and failing an inspection request
+lib.frequency = lib.frequency or 2 -- number of seconds between inspections
+lib.timeout = lib.timeout or 10 -- number of seconds before timing out and failing an inspection request
 
 local inCombat
 
@@ -304,9 +303,9 @@ end
 
 local function OnUpdate(frame, elapsed)
 	local now = GetTime()
-	if now - lib.lastInspectTime > INSPECT_INTERVAL then
+	if now - lib.lastInspectTime > lib.frequency then
 		for guid, timeSent in pairs(lib.sent) do
-			if now - timeSent > INSPECT_TIMEOUT then
+			if now - timeSent > lib.timeout then
 				lib.failed[guid] = true
 			end
 		end
