@@ -233,6 +233,7 @@ local function NotifyInspectHook(unit)
 	lib.lastInspectTime = now
 	local guid = UnitGUID(unit)
 	if guid then
+		debug(6, "NotifyInspect", guid, unit)
 		lib.pending:delete(guid)
 		lib.failed:delete(guid)
 		lib.sent[guid] = now
